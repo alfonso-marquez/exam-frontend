@@ -16,11 +16,29 @@ $(document).ready(function () {
   $(".play-pause-btn").on("click", function () {
     if (isPlaying) {
       $slider.slick("slickPause");
-      $(this).text("▶"); // play icon
+      $(this)
+        .html('<i class="bi bi-play-fill" aria-hidden="true"></i>') // play icon
+        .attr("aria-label", "Play") // update label
+        .attr("aria-pressed", "false");
     } else {
       $slider.slick("slickPlay");
-      $(this).text("❚❚"); // pause icon
+      $(this)
+        .html('<i class="bi bi-pause-fill" aria-hidden="true"></i>') // pause icon
+        .attr("aria-label", "Pause") // update label
+        .attr("aria-pressed", "true");
     }
     isPlaying = !isPlaying;
   });
+
+  //hover deprecated
+  if ($(window).width() > 768) {
+    // run only if not mobile
+    $(".dropdown")
+      .on("mouseenter", function () {
+        $(this).children(".dropdown-menu").addClass("show");
+      })
+      .on("mouseleave", function () {
+        $(this).children(".dropdown-menu").removeClass("show");
+      });
+  }
 });

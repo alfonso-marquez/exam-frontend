@@ -1,3 +1,43 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  text-decoration: none;
+}
+
+footer a,
+footer a:hover {
+  color: #adadad;
+}
+
+.nav-link.active {
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 8px;
+}
+
+.skip-to-content-link {
+  background: #e77e23;
+  left: 8px;
+  padding: 8px;
+  position: absolute;
+  top: -1000px;
+  z-index: 1000;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.skip-to-content-link:focus {
+  top: 8px;
+}
+
 .hero-slider {
   position: relative;
   height: 100vh;
@@ -7,7 +47,6 @@
 .hero-slider .slide {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -17,9 +56,17 @@
   border-radius: 8px;
 }
 
+.slide-text {
+  margin-left: 11%;
+}
+
 #news-section {
   background-color: #003057;
   color: white;
+}
+
+#events-section a {
+  color: black;
 }
 
 #filings-section {
@@ -27,15 +74,47 @@
   color: white;
 }
 
+#filings-section a {
+  border: white 1px solid;
+}
+#filings-section a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #003057;
+}
+
+#filings-section .view-all-link {
+  border: none;
+}
+
+#filings-section .view-all-link:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.view-all-link {
+  border: none;
+}
+
+.view-all-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.arrow {
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
 .table-custom {
   --bs-table-bg: transparent;
   --bs-table-color: white;
-  --bs-table-border-color: gray;
+  --bs-table-border-color: #adadad;
 }
 
 #footer {
   background-color: #003058;
-  color: gray;
+  color: #adadad;
 }
 
 .bg-gradient-light-blue {
@@ -48,17 +127,21 @@
 
 .custom-dots-div {
   position: absolute;
-  bottom: 200px;
-  /* move higher or lower */
-  left: 17%;
-  transform: translateX(-50%);
-  width: 100%;
+  bottom: 10%;
+  left: 10%;
+  width: auto;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* space between dots and button */
+}
+
+.slick-dots {
+  display: flex;
+  position: relative;
+  width: auto;
+  bottom: 0;
 }
 
 .slick-dots li button:before {
@@ -77,16 +160,42 @@
 
 .play-pause-btn {
   background: none;
-  border: 2px solid white;
-  border-radius: 50%;
   color: white;
-  font-size: 14px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  line-height: 1;
+  font-size: 22px;
+  border: none;
+  outline: none;
 }
 
-.play-pause-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+.play-pause-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.events-background {
+  /* for dektop */
+  left: 0;
+  z-index: -1;
+  background: #fafafa 50%;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 0;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
+
+/* small to medium */
+@media (max-width: 768px) {
+  .events-background {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
