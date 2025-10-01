@@ -56,8 +56,26 @@ footer a:hover {
   border-radius: 8px;
 }
 
+.slider {
+  overflow-x: hidden;
+}
+
 .slide-text {
   margin-left: 11%;
+}
+
+.slide1 {
+  background: url("../images/hero1.JPG") center/cover no-repeat;
+}
+.slide2 {
+  background: url("../images/hero2.JPG") center/cover no-repeat;
+}
+.slide3 {
+  background: url("../images/hero3.JPG") center/cover no-repeat;
+}
+
+#corporate-overview-section p {
+  font-size: 20px;
 }
 
 #news-section {
@@ -65,8 +83,25 @@ footer a:hover {
   color: white;
 }
 
+.news-content-div {
+  border-bottom: 1px solid #adadad;
+}
+
+#events-section {
+  overflow: hidden;
+}
+
 #events-section a {
   color: black;
+}
+
+.events-container-div,
+.events-div {
+  position: relative;
+}
+
+.events-div {
+  z-index: 1;
 }
 
 #filings-section {
@@ -115,6 +150,11 @@ footer a:hover {
 #footer {
   background-color: #003058;
   color: #adadad;
+}
+
+.consent-div {
+  padding-left: 40px;
+  margin-bottom: 20px;
 }
 
 .bg-gradient-light-blue {
