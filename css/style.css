@@ -1,48 +1,92 @@
 .hero-slider {
-    position: relative;
-    height: 100vh;
-    /* min-height: 400px; */
+  position: relative;
+  height: 100vh;
+  /* min-height: 400px; */
 }
 
 .hero-slider .slide {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-slider .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 #news-section {
-    background-color: #003057;
-    color: white;
+  background-color: #003057;
+  color: white;
 }
 
 #filings-section {
-    /* background-color: #003057; */
-    color: white;
+  /* background-color: #003057; */
+  color: white;
 }
 
 .table-custom {
-    --bs-table-bg: transparent;
-    --bs-table-color: white;
-    --bs-table-border-color: gray;
+  --bs-table-bg: transparent;
+  --bs-table-color: white;
+  --bs-table-border-color: gray;
 }
 
 #footer {
-    background-color: #003058;
-    color: gray;
+  background-color: #003058;
+  color: gray;
 }
 
 .bg-gradient-light-blue {
-    background: linear-gradient(to left, #003058 0%, #005BA1 100%);
+  background: linear-gradient(to left, #003058 0%, #005ba1 100%);
 }
 
-
 .bg-gradient-blue {
-    background: linear-gradient(to left, #00192F 0%, #0d3b5c 100%);
+  background: linear-gradient(to left, #00192f 0%, #0d3b5c 100%);
+}
+
+.custom-dots-div {
+  position: absolute;
+  bottom: 200px;
+  /* move higher or lower */
+  left: 17%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* space between dots and button */
+}
+
+.slick-dots li button:before {
+  font-size: 8px;
+  /* dot size */
+  color: white;
+  /* inactive dot color */
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  /* active dot color */
+  opacity: 1;
+}
+
+.play-pause-btn {
+  background: none;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.play-pause-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
